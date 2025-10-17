@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Sergoe UI", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f5f7fa00,#c3cfe2 );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+}
+
+
+.container{
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* ================= le header de la page ================ */
+
+header{
+    background: linear-gradient(135deg, #3498dbf6, #2c3e50);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1{
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+header p{
+    font-size: 1rem;
+    opacity: 0.9;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* ====================== le style du formulaire ==================== */
+.form-container{
+    padding: 30px;
+}
+
+.form-group{
+    margin-bottom: 25px;
+}
+
+.row-form{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+    
+.form-colum{
+    flex: 1;
+}
+
+label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+
+.required:after{
+    content: "*";
+    color: #e74c3c;
+}
+
+.input-group{
+    position: relative;
+}
+
+input, select, textarea{
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 16px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+input:focus, select:focus, textarea:focus{
+    outline: none;
+    border-color: #3498dbf6;
+    box-shadow:0 0 0 3px rgba(52, 152, 219, 0.2) ;
+}
+
+input:valid:not(:placeholder-shown){
+    border-color: #2ecc71;
+}
+
+input:invalid:not(:placeholder-shown){
+    border-color: #f80a02;
+}
+
+
+.input-icon{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7f8c9d;
+}
+
+textarea{
+    min-height: 150px;
+    resize: vertical;
+}
+
+.radio-group, .checkbox-group{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 5px;
+
+}
+
+.radio-option, .checkbox-option{
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+
+input[type="radio"], input[type="checkbox"]{
+    width: auto;
+    margin-right: 5px;
+}
+
+.help-text{
+    font-size: 0.85rem;
+    color: #7f8c9d;
+    margin-top: 5px;
+}
+
+/* ======================== bouton========================== */
+button{
+    background: linear-gradient(135deg, #3498dbf6, #2c3e50);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.6);
+
+}
+
+.button-group{
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+button:hover{
+    transform: translateY(-3px);
+     box-shadow: 0 8px 15px rgba(52, 152, 219, 0.6);
+}
+
+button:active{
+    transform: translateY(0);
+}
+
+/* =================== info de contact====================== */
+.contact-info{
+    background-color: #f8f9fa;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+}
+
+.info-item{
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+.infon-icon{
+    font-size: 1.5rem;
+    color: #3498dbf6;
+    margin-bottom: 10px;
+}
+
+
+
+/* ==================== responsivite ============================= */
+@media (max-width: 768px){
+    .row-form{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .contact-info{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
